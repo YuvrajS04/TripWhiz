@@ -1,0 +1,16 @@
+.tag {
+  padding: 0.25rem 0.5rem;
+  height: 2.063rem;
+  min-width: 7rem;
+  border: 0.063rem solid #47b7bc;
+  border-radius: 1.25rem;
+  background-color: #FFFFFF;
+}
+
+.tag:hover{
+    background-color: #F6F39E;
+}
+
+.tag::selection{
+    background-color: #47B7BC;
+}

@@ -10,10 +10,33 @@
   box-sizing: border-box;
 }
 
-// img {
-//     max-width: 100%;
+.gallery__wrapper {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+// .gallery__title{
+
 // }
 
+img {
+  max-width: 100%;
+}
+
+.img__wrapper {
+  line-height: 0;
+  z-index: 10;
+}
+
+.plus {
+  position: relative;
+  bottom: 1.9rem;
+  left: 1rem;
+}
+a{
+  margin: 0;
+  padding: 0;
+}
 // //   }
 
 // .grid-container{
@@ -62,10 +85,9 @@
 /* Style your items */
 .my-masonry-grid_column > div {
   /* change div to reference your elements you put in <Masonry> */
-  background: grey;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
-.imgs{
-    object-fit: cover;
+.imgs {
+  object-fit: cover;
 }
