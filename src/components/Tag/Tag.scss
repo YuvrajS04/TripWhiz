@@ -11,6 +11,10 @@
     background-color: #F6F39E;
 }
 
-.tag::selection{
-    background-color: #47B7BC;
+.selected {
+    background-color: #F6F39E;
+  }
+
+.tag.selected{
+    background-color: #F6F39E;  
 }

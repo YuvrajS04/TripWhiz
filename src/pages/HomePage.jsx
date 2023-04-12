@@ -34,7 +34,7 @@ function HomePage() {
       setLocationsData(res.data);
     });
   }
-  console.log(locationsData);
+  // console.log(locationsData);
 
   // const getPhotos =  useCallback(() => {
   //   axios.get(`${api}/locations`).then((res) => {

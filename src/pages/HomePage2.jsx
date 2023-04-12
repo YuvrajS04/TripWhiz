@@ -1,9 +1,22 @@
 import "./HomePage2.scss";
+import { useState } from "react";
 import Tag from "../components/Tag/Tag";
 import arrow from "../assets/icons/arrow.svg"
 import hero from "../assets/image/hero2.jpg"
 
+
+
 function HomePage2({handleTags}) {
+
+    const [selectedTag, setSelectedTag] = useState(null)
+    
+    
+    const handleTagClick = (tag) => {
+     console.log(`Tag clicked: ${tag.name}`);
+    setSelectedTag(tag);
+
+    handleTags(tag);
+    }
   const tags = [
     { id: 1, name: "adventure"},
     { id: 2, name: "tropical"},
@@ -33,7 +46,7 @@ function HomePage2({handleTags}) {
         {tags.map((element) => {
             // console.log(element.name)
             return(
-            <Tag name={element.name} handleTags={handleTags} />
+            <Tag name={element.name} handleTags={handleTags} selected={selectedTag === element.name} onClick={() => handleTagClick(element)} />
             )
         })}
         </div>
