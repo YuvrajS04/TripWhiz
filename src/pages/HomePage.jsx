@@ -6,27 +6,35 @@ import Masonry from "react-masonry-css";
 import HomePage2 from "./HomePage2";
 import plus from "../assets/icons/add.svg"
 
-function HomePage() {
+function HomePage({addImage}) {
   const api = "http://localhost:5555";
   const url = "http://localhost:5555";
   const [locationsData, setLocationsData] = useState([]);
   const [tagsArr, setTagsArr] = useState([]);
-  const [imageArr, setImageArr] = useState([]);
+  // const [imageArr, setImageArr] = useState([]);
 
   useEffect(() => {
     getPhotos();
   }, []);
 
-  // const images = [];
 
-  function addImage(url, location){
-    setImageArr([...imageArr, {url, location}]);
-    console.log([imageArr]);
+  // function addImage(url, location){
+  //   setImageArr([...imageArr, {url, location}]);
+  //   console.log([imageArr]);
 
-  }
+  // }
+
+  const imagelist = []; 
 
   function handleTags(tag){
     setTagsArr([...tagsArr, tag])
+  }
+
+  function handleDelete(tag){
+    const newTagsArr = tagsArr.filter((e) => (
+      e !== tag
+     ))
+    setTagsArr(newTagsArr)
   }
 
   function getPhotos() {
@@ -55,7 +63,7 @@ function HomePage() {
   console.log(locationsData.filter((location)=> (tagsArr.every((tag) => location.tags.includes(tag)))))
   return (
     <div>
-    <HomePage2 handleTags={handleTags} />
+    <HomePage2 handleDelete={handleDelete} tagsArr={tagsArr} handleTags={handleTags} />
     <div className="gallery__wrapper">
       <h1 className="gallery__title">Trending Pictures</h1>
     <Masonry

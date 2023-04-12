@@ -1,14 +1,25 @@
 import "./HomePage2.scss";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Tag from "../components/Tag/Tag";
 import arrow from "../assets/icons/arrow.svg"
 import hero from "../assets/image/hero2.jpg"
 
 
 
-function HomePage2({handleTags}) {
+function HomePage2({handleTags, tagsArr, handleDelete}) {
+    const navigate = useNavigate();
 
     const [selectedTag, setSelectedTag] = useState(null)
+
+    const handleGenerate = (e) =>{
+
+        navigate("/results")
+        // add delay/alert
+        // post to backend
+
+        //on destination componenet, get call and render the previous post req
+    }
     
     
     const handleTagClick = (tag) => {
@@ -52,9 +63,18 @@ function HomePage2({handleTags}) {
         </div>
         <div className="tag-bar__right">
             <img src={arrow} alt="arrow" />
-            <button className="tag-bar__right-button" >Start to Generate</button>
+            <button className="tag-bar__right-button" onClick={handleGenerate} >Start to Generate</button>
         </div>
-    </div>
+        </div>
+        <div className="selected__tag-wrapper">
+        {tagsArr.map((element) => {
+            return(
+                    <button  className="selected__tag" >{element}<p onClick={()=> {handleDelete(element)}}>X</p></button>
+            )
+
+        })}
+        </div>
+    
     </>
   );
 }
