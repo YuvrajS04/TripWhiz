@@ -4,6 +4,7 @@
   object-fit: cover;
   display: flex;
   justify-content: center;
+  margin-top: 0.3rem;
 
   &__title-top {
     position: absolute;
@@ -45,7 +46,7 @@
   align-items: center;
 }
 .tag-bar__left::-webkit-scrollbar {
-    display: none; /* Hide the scrollbar in Webkit browsers */
+    display: none; 
 }
 .tag-bar__right {
   gap: 0.625rem;

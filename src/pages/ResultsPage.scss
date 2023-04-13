@@ -7,6 +7,11 @@
     overflow-x: auto;
     margin: 2rem;
     padding: 1rem; 
+
+}
+
+.selected-images__wrapper::-webkit-scrollbar{
+    display: none;
 }
 
 .result__title{

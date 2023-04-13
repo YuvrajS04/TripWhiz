@@ -21,12 +21,6 @@ function TopDestinationCard({element}) {
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt exercitationem iste, voluptatum, quia explicabo laboriosam rem adipisci voluptates cumque, veritatis atque nostrum corrupti ipsa asperiores harum? Dicta odio aut hic.
       </p>
-      <a href="#" class="button">
-        Find out more 
-        {/* <span class="material-symbols-outlined">
-          arrow_right_alt
-        </span> */}
-      </a>
     </div>
   </div>
         </>
