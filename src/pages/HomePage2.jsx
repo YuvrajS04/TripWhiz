@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Tag from "../components/Tag/Tag";
 import arrow from "../assets/icons/arrow.svg";
 import hero from "../assets/image/hero2.jpg";
-import deleteIcon from "../assets/icons/delete.svg"
-
+import deleteIcon from "../assets/icons/delete.svg";
 
 function HomePage2({ handleTags, tagsArr, handleDelete }) {
   const navigate = useNavigate();
@@ -70,12 +69,13 @@ function HomePage2({ handleTags, tagsArr, handleDelete }) {
           return (
             <div className="selected__tag">
               {element}
-              <img className="selected__tag-icon" src={deleteIcon}
+              <img
+                className="selected__tag-icon"
+                src={deleteIcon}
                 onClick={() => {
                   handleDelete(element);
                 }}
-              >
-              </img>
+              ></img>
             </div>
           );
         })}

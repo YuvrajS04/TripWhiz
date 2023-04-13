@@ -1,19 +1,18 @@
 .selected-images__wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-x: auto;
-    margin: 2rem;
-    padding: 1rem; 
-
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  margin: 2rem;
+  padding: 1rem;
 }
 
-.selected-images__wrapper::-webkit-scrollbar{
-    display: none;
+.selected-images__wrapper::-webkit-scrollbar {
+  display: none;
 }
 
-.result__title{
-    padding-left: 3.75rem;
+.result__title {
+  padding-left: 3.75rem;
 }

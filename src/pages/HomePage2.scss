@@ -49,7 +49,7 @@
   align-items: center;
 }
 .tag-bar__left::-webkit-scrollbar {
-    display: none; 
+  display: none;
 }
 .tag-bar__right {
   gap: 0.625rem;
@@ -70,7 +70,7 @@
   background-color: #84b59d;
 }
 
-.selected__tag{
+.selected__tag {
   padding: 0.25rem 0.5rem;
   display: flex;
   min-width: 7rem;
@@ -80,7 +80,7 @@
   text-transform: capitalize;
   justify-content: space-around;
   align-items: center;
-  &-wrapper{
+  &-wrapper {
     display: flex;
     flex-direction: row;
     margin: 1rem 0 0 3rem;
@@ -88,10 +88,10 @@
   }
 }
 
-.selected__tag-icon{
-    width: 20%;
+.selected__tag-icon {
+  width: 20%;
 }
 
-.selected__tag p{
-    cursor: pointer;
+.selected__tag p {
+  cursor: pointer;
 }
