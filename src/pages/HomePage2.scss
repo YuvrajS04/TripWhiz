@@ -67,6 +67,27 @@
   background-color: #84b59d;
 }
 
+.selected__tag{
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  min-width: 7rem;
+  color: white;
+  border-radius: 1.25rem;
+  background-color: black;
+  text-transform: capitalize;
+  justify-content: space-around;
+  align-items: center;
+  &-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0 0 3rem;
+    gap: 0.9rem;
+  }
+}
+
+.selected__tag-icon{
+    width: 20%;
+}
 
 .selected__tag p{
     cursor: pointer;

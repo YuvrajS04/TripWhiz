@@ -1,5 +1,6 @@
 import "./HomePage.scss";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useEffect, useState, useCallback } from "react";
 import Masonry from "react-masonry-css";
@@ -17,6 +18,12 @@ function HomePage({addImage}) {
     getPhotos();
   }, []);
 
+  const handlePlusImageClick = (url, location) => {
+    // Create an alert when the "plus" image is clicked
+    toast(`Image added!`);
+    addImage(url, location);
+  };
+
 
   // function addImage(url, location){
   //   setImageArr([...imageArr, {url, location}]);
@@ -28,6 +35,7 @@ function HomePage({addImage}) {
 
   function handleTags(tag){
     setTagsArr([...tagsArr, tag])
+    toast(`"${tag}" tag selected.`)
   }
 
   function handleDelete(tag){
@@ -35,6 +43,7 @@ function HomePage({addImage}) {
       e !== tag
      ))
     setTagsArr(newTagsArr)
+    toast(`"${tag}" tag removed.`)
   }
 
   function getPhotos() {
@@ -80,7 +89,12 @@ function HomePage({addImage}) {
           return (
             <div className="img__wrapper">
               <img className="imgs" src={`${url}/${element.url}`} alt={element.tag} />
-              <img onClick={()=>addImage(element.url, element.location)} className="plus" src={plus} />
+              <img 
+              onClick={() =>
+                handlePlusImageClick(element.url, element.location)
+              }
+              // onClick={()=>addImage(element.url, element.location)} 
+              className="plus" src={plus} />
             </div>
           );
         })
@@ -90,7 +104,13 @@ function HomePage({addImage}) {
           return (
             <div className="img__wrapper">
               <img className="imgs" src={`${url}/${element.url}`} alt={element.tag} />
-              <img onClick={()=>addImage(element.url, element.location)} className="plus" src={plus} />
+              
+              <img 
+              // onClick={()=>addImage(element.url, element.location)} 
+              onClick={() =>
+                handlePlusImageClick(element.url, element.location)
+              }
+              className="plus" src={plus} />
             </div>
           );
         })

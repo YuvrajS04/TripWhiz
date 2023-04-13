@@ -2,8 +2,6 @@ import "./TopDestinationCard.scss"
 
 
 function TopDestinationCard({element}) {
-    console.log(element.url);
-    console.log(element.location);
 
 
     const startingUrl = "http://localhost:5555";
