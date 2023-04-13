@@ -5,7 +5,7 @@ import Tag from "../components/Tag/Tag";
 import arrow from "../assets/icons/arrow.svg";
 import hero from "../assets/image/hero2.jpg";
 import deleteIcon from "../assets/icons/delete.svg"
-// import delete from "../assets/image/delete.svg";
+
 
 function HomePage2({ handleTags, tagsArr, handleDelete }) {
   const navigate = useNavigate();
@@ -14,10 +14,6 @@ function HomePage2({ handleTags, tagsArr, handleDelete }) {
 
   const handleGenerate = (e) => {
     navigate("/results");
-    // add delay/alert
-    // post to backend
-
-    //on destination componenet, get call and render the previous post req
   };
 
   const handleTagClick = (tag) => {
@@ -52,7 +48,6 @@ function HomePage2({ handleTags, tagsArr, handleDelete }) {
       <div className="tag-bar__wrapper">
         <div className="tag-bar__left">
           {tags.map((element) => {
-            // console.log(element.name)
             return (
               <Tag
                 name={element.name}
