@@ -1,4 +1,4 @@
-TripWhiz
+TripWhiz: 
 This is a project that uses React and React Router for building a web application that displays images of top vacation destinations. It includes features such as tag filtering and image selection. Users can add images to their collection and view the selected images in a separate results page.
 
 Table of Contents
@@ -33,6 +33,7 @@ Tag: A reusable component that displays a tag button. It receives the tag name, 
 <img width="1384" alt="Tags" src="https://user-images.githubusercontent.com/123492654/231673040-5153869b-ae0d-4f5c-a95e-5af95601151e.png">
 
 TopDestinationCard: A reusable component that displays a card with an image and location information. It receives the image data as props and displays the image URL, location, and description.
+
 <img width="339" alt="Card" src="https://user-images.githubusercontent.com/123492654/231674170-504acb68-a9c9-47c0-a8e7-a676f7ca4a4e.png">
 
 The application uses React Router for handling routing and Axios for making API requests to fetch image data. It also uses React Toastify for displaying notifications.
