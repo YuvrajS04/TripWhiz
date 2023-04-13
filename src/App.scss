@@ -1,3 +1,11 @@
+@import "styles/partials/font";
+
+* {
+  font-family: "avenir";
+  box-sizing: border-box;
+}
+
+
 .layout{
   max-width: 1440px;
   margin: 0 auto;
