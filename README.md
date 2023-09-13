@@ -1,12 +1,6 @@
 TripWhiz: 
-This is a project that uses React and React Router for building a web application that displays images of top vacation destinations. It includes features such as tag filtering and image selection. Users can add images to their collection and view the selected images in a separate results page.
+This is a project that uses React and React Router to build a web application that displays images of top vacation destinations. It includes features such as tag filtering and image selection. Users can add images to their collection and view the selected images on a separate results page.
 
-Table of Contents
-Installation
-Usage
-Components
-Technologies Used
-License
 Installation
 To run this project locally, follow these steps:
 
@@ -39,7 +33,7 @@ TopDestinationCard: A reusable component that displays a card with an image and 
 The application uses React Router for handling routing and Axios for making API requests to fetch image data. It also uses React Toastify for displaying notifications.
 
 Components
-The main components in this project are:
+The main components of this project are:
 
 App: The main component that manages the routing and includes the HomePage and ResultsPage components.
 
@@ -55,12 +49,12 @@ Tag: A reusable component that displays a tag button for filtering images by tag
 
 TopDestinationCard: A reusable component that displays a card with an image and location information.
 
-Technologies Used
-React
-React Router
-Axios
-React Toastify
-CSS/Sass
+Technologies Used:
+React,
+React Router,
+Axios,
+React Toastify,
+CSS/Sass,
 License
 This project is open source. Feel free to use, modify, and distribute the code as needed.
 
